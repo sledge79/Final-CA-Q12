@@ -7,9 +7,9 @@
 static DevI2C devI2c(PB_11, PB_10);
 static LSM6DSLSensor acc_gyro(&devI2c, 0xD4, D4, D5); 
 
-PwmOut redLed(LED1);
-PwmOut greenLed(LED2);
-PwmOut blueLed(LED3);
+PwmOut redLed(PE_3);
+PwmOut greenLed(PB_14);
+PwmOut blueLed(PC_9);
 
 float compute(int x, int y, int z, int x_ref, int y_ref, int z_ref) {
     float dot_product = x * x_ref + y * y_ref + z * z_ref;
