@@ -49,6 +49,6 @@ int main() {
         // Turn on the LED corresponding to the z-axis orientation
         blueLed = (res < 45.0);
 
-        wait_us(200);
+        wait_us(2000);
     }
 }
