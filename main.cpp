@@ -34,19 +34,16 @@ int main() {
         acc_gyro.get_x_axes(axes);
         res = compute(axes[0], axes[1], axes[2], 1, 0, 0);  
 
-        // Turn on the LED corresponding to the x-axis orientation
-        redLed = (res < 45.0);
+        
 
         acc_gyro.get_x_axes(axes);
         res = compute(axes[0], axes[1], axes[2], 0, 1, 0);  
 
-        // Turn on the LED corresponding to the y-axis orientation
         greenLed = (res < 45.0);
 
         acc_gyro.get_x_axes(axes);
         res = compute(axes[0], axes[1], axes[2], 0, 0, 1); 
 
-        // Turn on the LED corresponding to the z-axis orientation
         blueLed = (res < 45.0);
 
         wait_us(2000);
